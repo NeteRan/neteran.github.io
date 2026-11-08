@@ -1,0 +1,58 @@
+:root {
+  /* 品牌色 —— 赛博紫 */
+  --vp-c-brand-1: #a78bfa;
+  --vp-c-brand-2: #8b5cf6;
+  --vp-c-brand-3: #7c3aed;
+  --vp-c-brand-soft: rgba(139, 92, 246, 0.14);
+
+  /* 暗色背景 —— 极客深色 */
+  --vp-c-bg: #0f0f14;
+  --vp-c-bg-alt: #16161d;
+  --vp-c-bg-soft: #1b1b24;
+  --vp-c-bg-elv: #20202b;
+
+  /* 代码块背景 */
+  --vp-code-block-bg: #16161d;
+
+  /* 等宽字体 */
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code',
+    Consolas, 'Courier New', monospace;
+}
+
+/* 深色模式下微调 */
+.dark {
+  --vp-c-bg: #0f0f14;
+  --vp-c-bg-alt: #16161d;
+  --vp-c-bg-soft: #1b1b24;
+  --vp-c-bg-elv: #20202b;
+  --vp-c-brand-1: #a78bfa;
+  --vp-c-brand-2: #8b5cf6;
+  --vp-c-brand-3: #7c3aed;
+}
+
+/* 代码块圆角与阴影 */
+.vp-doc div[class*='language-'] {
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* 行内代码 */
+.vp-doc :not(pre) > code {
+  background: rgba(139, 92, 246, 0.12);
+  color: #c4b5fd;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+/* 标题渐变点缀 */
+.vp-doc h1 {
+  background: linear-gradient(135deg, #a78bfa, #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 链接悬停效果 */
+.vp-doc a {
+  transition: color 0.2s;
+}

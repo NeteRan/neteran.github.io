@@ -1,0 +1,22 @@
+{
+  "name": "neteran-blog",
+  "version": "1.0.0",
+  "description": "NeteRan 的技术博客 - CTF WP / 算法题解 / 学习笔记 / 代码项目",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "keywords": [
+    "blog",
+    "vitepress",
+    "ctf",
+    "writeup"
+  ],
+  "author": "NeteRan",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
