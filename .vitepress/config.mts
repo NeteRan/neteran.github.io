@@ -59,7 +59,7 @@ export default defineConfig({
           text: '学习笔记',
           items: [
             { text: '笔记总览', link: '/notes/' },
-            { text: '渗透测试 · 存活检测', link: '/notes/存活检测' },
+            { text: '渗透测试 · 子域名探查流程', link: '/notes/存活检测' },
           ],
         },
       ],
