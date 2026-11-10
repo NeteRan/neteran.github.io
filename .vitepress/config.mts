@@ -71,7 +71,9 @@ export default defineConfig({
           text: '阶段一 · 信息收集',
           collapsed: false,
           items: [
-            { text: '基础信息收集', link: '/notes/pentest/子域名枚举' },
+            { text: '基础信息收集', link: '/notes/pentest/' },
+            { text: '授权范围与测试边界', link: '/notes/pentest/授权范围与测试边界' },
+            { text: '业务与角色梳理', link: '/notes/pentest/业务与角色梳理' },
             { text: '子域名枚举', link: '/notes/pentest/子域名枚举' },
             { text: '证书透明日志', link: '/notes/pentest/证书透明日志' },
             { text: '存活检测', link: '/notes/pentest/存活检测' },
