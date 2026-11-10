@@ -64,16 +64,39 @@ export default defineConfig({
         {
           text: '渗透测试',
           items: [
-            { text: '总览', link: '/notes/pentest/' },
+            { text: '渗透测试总览', link: '/notes/pentest/' },
           ],
         },
         {
-          text: '阶段一 · 基础信息收集',
+          text: '阶段一 · 信息收集',
+          collapsed: false,
           items: [
+            { text: '基础信息收集', link: '/notes/pentest/子域名枚举' },
             { text: '子域名枚举', link: '/notes/pentest/子域名枚举' },
             { text: '证书透明日志', link: '/notes/pentest/证书透明日志' },
             { text: '存活检测', link: '/notes/pentest/存活检测' },
             { text: '资产统计', link: '/notes/pentest/资产统计' },
+          ],
+        },
+        {
+          text: '阶段二 · 漏洞挖掘',
+          collapsed: false,
+          items: [
+            { text: '自动化筛查与人工验证', link: '/notes/pentest/' },
+          ],
+        },
+        {
+          text: '阶段三 · 漏洞利用与验证',
+          collapsed: false,
+          items: [
+            { text: '漏洞利用与定级', link: '/notes/pentest/' },
+          ],
+        },
+        {
+          text: '阶段四 · 报告与答辩',
+          collapsed: false,
+          items: [
+            { text: '报告撰写与答辩', link: '/notes/pentest/' },
           ],
         },
       ],
