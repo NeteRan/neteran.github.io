@@ -59,6 +59,7 @@ export default defineConfig({
           text: '学习笔记',
           items: [
             { text: '笔记总览', link: '/notes/' },
+            { text: '网络安全学习计划清单', link: '/notes/网络安全学习计划清单' },
           ],
         },
         {
