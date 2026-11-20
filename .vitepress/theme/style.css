@@ -104,3 +104,40 @@ body::before {
 .dark .VPLocalNav {
   background: rgba(15, 15, 20, 0.72) !important;
 }
+
+/* ===== 首页 Hero 与卡片（浅色模式）===== */
+/* 首页右上角的 logo 方块：去掉 VitePress 默认的深色内阴影，
+   让它直接显示 favicon.svg 的白色圆角块 */
+.VPHome .image-bg,
+.VPHome .image-container {
+  background: transparent !important;
+}
+
+/* 首页功能卡片：浅色模式用白色半透明底 + 毛玻璃，深色文字 */
+.VPFeature {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.VPFeature .title {
+  color: #1a1a22;
+}
+
+.VPFeature .details {
+  color: #55555f;
+}
+
+/* 暗色模式下卡片恢复深色半透明 */
+.dark .VPFeature {
+  background: rgba(22, 22, 29, 0.72) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.dark .VPFeature .title {
+  color: #e5e5ea;
+}
+
+.dark .VPFeature .details {
+  color: #a0a0aa;
+}
