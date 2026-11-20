@@ -56,3 +56,38 @@
 .vp-doc a {
   transition: color 0.2s;
 }
+
+/* ===== 云海背景 ===== */
+/* 给整个页面加云海壁纸背景，并叠加半透明遮罩保证文字可读 */
+body {
+  background-image: url('/cloud-sea-bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 遮罩层：压暗背景，让暗色主题文字保持清晰可读 */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: rgba(15, 15, 20, 0.82);
+  pointer-events: none;
+}
+
+/* 让主要内容区在背景上略微透出云海，但保持可读 */
+.VPContent,
+.VPDoc,
+.Layout {
+  background: transparent !important;
+}
+
+/* 侧边栏、导航栏半透明，透出云海背景 */
+.VPSidebar,
+.VPNavBar,
+.VPLocalNav {
+  background: rgba(15, 15, 20, 0.72) !important;
+  backdrop-filter: blur(8px);
+}
