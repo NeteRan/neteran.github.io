@@ -58,7 +58,8 @@
 }
 
 /* ===== 云海背景 ===== */
-/* 给整个页面加云海壁纸背景，并叠加半透明遮罩保证文字可读 */
+/* 给整个页面加云海壁纸背景，并叠加半透明遮罩保证文字可读。
+   遮罩颜色跟随主题模式：暗色用深色遮罩，浅色用浅色遮罩 */
 body {
   background-image: url('/cloud-sea-bg.jpg');
   background-attachment: fixed;
@@ -67,14 +68,19 @@ body {
   background-repeat: no-repeat;
 }
 
-/* 遮罩层：压暗背景，让暗色主题文字保持清晰可读 */
+/* 遮罩层：默认（浅色模式）用浅色半透明白，让云海显得明亮清爽 */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: rgba(15, 15, 20, 0.82);
+  background: rgba(255, 255, 255, 0.78);
   pointer-events: none;
+}
+
+/* 暗色模式下改为深色遮罩 */
+.dark body::before {
+  background: rgba(15, 15, 20, 0.82);
 }
 
 /* 让主要内容区在背景上略微透出云海，但保持可读 */
@@ -84,10 +90,17 @@ body::before {
   background: transparent !important;
 }
 
-/* 侧边栏、导航栏半透明，透出云海背景 */
+/* 侧边栏、导航栏半透明，透出云海背景。
+   浅色模式用白色半透明面板，暗色模式用深色半透明面板 */
 .VPSidebar,
 .VPNavBar,
 .VPLocalNav {
-  background: rgba(15, 15, 20, 0.72) !important;
+  background: rgba(255, 255, 255, 0.72) !important;
   backdrop-filter: blur(8px);
+}
+
+.dark .VPSidebar,
+.dark .VPNavBar,
+.dark .VPLocalNav {
+  background: rgba(15, 15, 20, 0.72) !important;
 }
